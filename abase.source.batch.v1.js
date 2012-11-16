@@ -289,7 +289,7 @@
 						IE6Element.style.display = "none";
 					}, a.ptime)
 				}
-				if (browser.ie && browser.version == 6 && a.scroll == 1) {
+				if((browser.version == 6 && a.scroll == 1) || (browser.ie && d.compatMode == "BackCompat")){
 					IE6Element.style.position = "absolute";
 					if(_floatConfig[1] == "down"){
 						styleinfo = d.documentElement.clientHeight - (IE6Element.offsetHeight || (parseInt(a.height) + 21)) - a.mtop;
